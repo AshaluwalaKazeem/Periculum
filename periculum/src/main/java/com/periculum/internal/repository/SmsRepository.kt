@@ -5,6 +5,7 @@ import android.net.Uri
 import com.periculum.internal.models.SmsDataModel
 import com.periculum.internal.utils.PericulumDependency
 import java.util.*
+import com.periculum.internal.models.FinancialInstitutions
 
 internal class SmsRepository {
 
@@ -39,7 +40,41 @@ internal class SmsRepository {
             smsList.add(smsData)
         }
         cursor.close()
+        val filteredList = smsList.filter {
+            it.address.contains(
+                FinancialInstitutions.GTBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.GTBank.institutionShortName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.AccessBank.institutionShortName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.AccessBank.institutionShortName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.Opay.institutionShortName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.Opay.institutionShortName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.ZenithBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.ZenithBank.institutionShortName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.FCMB.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.FCMB.institutionShortName,
+                ignoreCase = true 
 
-        return smsList
+        }
+
+
+        return filtereList
     }
 }
