@@ -1,7 +1,7 @@
 package com.periculum.internal.models
 
 sealed class FinancialInstitutions(val institutionName: String, val institutionShortName: String) {
-    object GTBank: FinancialInstitutions(institutionName = "GTBank", institutionShortName = "GT")
+    object GTBank: FinancialInstitutions(institutionName = "GTBank", institutionShortName = "GTB")
     object AccessBank: FinancialInstitutions(institutionName = "AccessBank", institutionShortName = "Access")
     object ZenithBank: FinancialInstitutions(institutionName = "ZenithBank", institutionShortName = "Zenith")
     object FCMB: FinancialInstitutions(institutionName = "FCMB", institutionShortName = "FCMB")
@@ -50,4 +50,7 @@ sealed class FinancialInstitutions(val institutionName: String, val institutionS
     object FBNQuestMerchantBank: FinancialInstitutions(institutionName = "FBNQuestMerchantBank", institutionShortName = "FBNQuest")
     object FSDHMerchantBank: FinancialInstitutions(institutionName = "FSDHMerchantBank", institutionShortName = "FSDHMerchantBank")
     object NOVAMerchantBank: FinancialInstitutions(institutionName = "NOVAMerchantBank", institutionShortName = "NOVAMerchantBank")
+    object Bet: FinancialInstitutions(institutionName = "Bet", institutionShortName = "Bet")
+    object Loan: FinancialInstitutions(institutionName = "Loan", institutionShortName = "Loan")
+    object Insurance: FinancialInstitutions(institutionName = "Insurance", institutionShortName = "Insurance")
 }
