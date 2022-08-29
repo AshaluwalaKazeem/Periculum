@@ -5,6 +5,7 @@ import android.net.Uri
 import com.periculum.internal.models.SmsDataModel
 import com.periculum.internal.utils.PericulumDependency
 import java.util.*
+import com.periculum.internal.models.FinancialInstitutions
 
 internal class SmsRepository {
 
@@ -40,6 +41,322 @@ internal class SmsRepository {
         }
         cursor.close()
 
-        return smsList
+        val filteredList = smsList.filter {
+            it.address.contains(
+                FinancialInstitutions.GTBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.GTBank.institutionShortName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.AccessBank.institutionShortName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.AccessBank.institutionShortName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.Opay.institutionShortName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.Opay.institutionShortName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.ZenithBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.ZenithBank.institutionShortName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.FCMB.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.FCMB.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.FidelityBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.FidelityBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+            FinancialInstitutions.FirstBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+            FinancialInstitutions.FirstBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+            FinancialInstitutions.UnionBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+            FinancialInstitutions.UnionBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.UnitedBankOfAfrica.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.UnitedBankOfAfrica.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.CitiBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.CitiBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.EcoBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.EcoBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.HeritageBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.HeritageBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.KeystoneBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.KeystoneBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.PolarisBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.PolarisBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.StanbicIBTCBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.StanbicIBTCBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.StandardChartered.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.StandardChartered.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.SterlingBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.SterlingBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.TitanTrustBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.TitanTrustBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.UnityBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.UnityBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.WemaBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.WemaBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.GlobusBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.GlobusBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.ParallexBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.ParallexBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.ProvidusBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.ProvidusBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.SunTrustBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.SunTrustBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.JaizBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.JaizBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.LotusBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.LotusBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.TajBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.TajBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.MutualTrustMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.MutualTrustMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.RephidimMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.RephidimMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.ShepherdTrustMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.ShepherdTrustMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.EmpireTrustMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.EmpireTrustMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.FincaMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.FincaMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.FinaTrustMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.FinaTrustMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.AccionMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.AccionMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.PeaceMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.PeaceMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.InfinityMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.InfinityMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.PearlMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.PearlMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.CovenantMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.CovenantMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.AdvansLaFayetteMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.AdvansLaFayetteMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.SparkleBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.SparkleBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.KudaBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.KudaBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.RubiesBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.RubiesBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.VFDMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.VFDMicrofinanceBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.MintFinexMFBBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.MintFinexMFBBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.MKBMFBBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.MKBMFBBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.CoronationMerchantBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.CoronationMerchantBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.FBNQuestMerchantBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.FBNQuestMerchantBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.FSDHMerchantBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.FSDHMerchantBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.NOVAMerchantBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.NOVAMerchantBank.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.Bet.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.Bet.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.Loan.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.Loan.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.Insurance.institutionName,
+                ignoreCase = true
+            ) || it.address.contains(
+                FinancialInstitutions.Insurance.institutionName,
+                ignoreCase = true)
+        }
+
+
+        return filteredList
     }
 }
