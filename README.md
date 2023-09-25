@@ -268,6 +268,44 @@ The permissions that must be granted in order for this library to function are l
 <uses-permission android:name="android.permission.READ_SMS"/>
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
+## Info
+For this plugin to work, you must have a Periculum [account](https://register.insights-periculum.com) and you'll also need to use your Client Id and secret key to generate a token from the Periculum API see [docs](https://insights-periculum.readme.io/reference/authentication-request) here.
+
+## SDK User Flow
+```
+   +-----------------------------------------------------+
+   |                User Flow Diagram                    |
+   +-----------------------------------------------------+
+   |                                                     |
+   v                                                     |
+   [1]    Merchant Application requests permission      |
+   |      from client device                             |
+   |                                                     |
+   |                                                     |
+   v                                                     |
+   [2]    Merchant Application calls backend server to   |
+   |      generate access token from the info obtained   |
+   |      in step 1                                      |
+   |                                                     |
+   |                                                     |
+   v                                                     |
+   [3]    Data is pulled from customer device, and the   |
+   |      Merchant Application calls SDK method to       |
+   |      process it                                     |
+   |                                                     |
+   |                                                     |
+   v                                                     |
+   [4]    SDK calls Insights API to generate mobile     |
+   |      insights from the extracted data              |
+   |                                                     |
+   |                                                     |
+   v                                                     |
+   [End]  End of the user flow                            |
+   |                                                     |
+   +-----------------------------------------------------+
+
+```
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
