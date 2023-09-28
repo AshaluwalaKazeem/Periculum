@@ -306,6 +306,10 @@ For this plugin to work, you must have a Periculum [account](https://register.in
 
 ```
 
+# flow Diagram
+![SDK Flow](<Mobile SDK V1-SDK mini flow.drawio.png>)
+
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
